@@ -1,0 +1,40 @@
+<form [formGroup]="person" (ngSubmit)="onSubmit()">
+
+  <h3>Details</h3>
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter the Name" formControlName="name">
+    </mat-form-field>
+
+<br>
+  <!-- <label>
+    Name:
+    <input type="text" formControlName="name">
+  </label>
+<br> -->
+
+Gender<select name="gender" formControlName="Gender">
+    <option value=" "> EMPTY </option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+</select>
+
+  <br>
+  <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter Your Age" formControlName="Age">
+    </mat-form-field>
+<br>
+<!-- <button mat-button color="primary" type="submit" [disabled]="!person.valid">Submit</button> -->
+<button mat-button color="primary" type="submit" [disabled]="!person.valid">Submit</button>
+</form>
+
+<p>
+    Input Name: {{names }}
+    <br>
+    Input Gender:{{gender}}
+    <br>
+    Input Age:{{age}}
+  </p>
+
+
+
+
